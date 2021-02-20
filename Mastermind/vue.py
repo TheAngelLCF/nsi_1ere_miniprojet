@@ -16,9 +16,9 @@ def split_int(car):
             split_list.append(int(car[k]))
     return split_list
 
-def lire_proposition(nb_prop, longueur):
+def lire_proposition(nb_prop, longueur, nb_couleurs):
     print("Tour n°" + str(nb_prop))
-    rep = input("Votre proposition (4 entiers entre 0 et 8 séparés par des espaces) ? ")
+    rep = input("Votre proposition (" + str(longueur) +" entiers entre 0 et "+ str(nb_couleurs - 1) +" séparés par des espaces) ? ")
     if(est_chiffre(rep)):
         return split_int(rep)
     else:
@@ -28,7 +28,7 @@ def afficher_mpandbp(mp, bp):
     print("Vous avez", bp,"bon(s) nombre(s) de bien placé(s) et", mp, "de mal placé(s)")
     
 def afficher_gagnant(nbprop, secret):
-    print("Bravo, le code secret était", secret, ", vous l'avez résolu en", nbprop, "tour(s)")
+    print("Bravo, le code secret était", secret, ", vous l'avez résolu en", nbprop + 1, "tours")
     
 def afficher_perdant(nbprop,secret):
     print("Malheuresement, vous n'avez pas trouvé le code en", nbprop, " tours, le code était", secret)

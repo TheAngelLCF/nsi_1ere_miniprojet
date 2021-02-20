@@ -12,7 +12,7 @@ def main1(nb_props_max, nb_couleurs, longueur) :
     tours_actu = 1
     secret = md.generer_code(longueur, nb_couleurs)
     while tours_actu != nb_props_max + 1:
-        rep = vu.lire_proposition(tours_actu, longueur)
+        rep = vu.lire_proposition(tours_actu, longueur, nb_couleurs)
         if(rep == secret):
             fin = 1
             break
