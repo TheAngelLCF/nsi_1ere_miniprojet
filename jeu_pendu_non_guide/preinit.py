@@ -13,10 +13,7 @@ def etoilemot(mot):
     >>> etoilemot('coucou')
     '******'
     """
-    mot_cachee = ''
-    for etoile in range(len(mot)):
-        mot_cachee += '*'
-    return mot_cachee
+    return '*' * len(mot)
 
 def testmots(mot_cachee, vrai_mot, lettre):
     """
