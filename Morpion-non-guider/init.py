@@ -24,3 +24,13 @@ def verif_ligne(matrice):
             return True
         else:
             return False
+        
+def verif_colonne(matrice):
+    for k in range(len(matrice)):
+        if(matrice[0][k] == 'X') and (matrice[1][k] == 'X') and (matrice[2][k] == 'X'):
+            return True
+        elif(matrice[0][k] == 'O') and (matrice[1][k] == 'O') and (matrice[2][k] == 'O'):
+            return True
+        else:
+            return False
+        
